@@ -407,7 +407,9 @@ class Tello:
         """
         if self.background_frame_read is None:
             address = self.get_udp_video_address()
+            print(1)
             self.background_frame_read = BackgroundFrameRead(self, address)
+            print(2)
             self.background_frame_read.start()
         return self.background_frame_read
 
